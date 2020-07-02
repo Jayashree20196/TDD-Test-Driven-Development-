@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 class App extends Component {
     constructor() {
         super();
-
         this.state = {
             gifts : []
         }
