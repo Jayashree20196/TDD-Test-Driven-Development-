@@ -1,0 +1,42 @@
+Jest-Enzyme  - React TDD 
+
+--> TDD (Test Driven Development)
+    --> Coding a feature and test goes in hand in hand
+    --> 1. Unit Test
+    --> 2. Run the test
+    --> 3. Feature code to pass
+    --> 4. Refactor
+
+Installation: 
+   npm install enzyme jest-cli@20.0.4
+    
+   Jest - 20.0.4v
+   Enzyme - 3.11.0v
+	
+
+Project Dependent Packages:
+   React Bootstrap  - 1.0.1v
+   React Dom - 16.13.1v
+
+
+Initializing:
+
+Root test file - App.test.js
+command to run test - npm run test  
+
+Features in enzyme:
+
+Shallow Rendering : It takes the whole component as a unit for testing without affecting the features of its child components.
+ 
+Note : If required, we can install enzyme apadter for full compactibility with react.
+
+Features in Jest:
+
+toMatchSnapshot() : It is a key method to use the feature of snapshot in Jest.
+  -->Snapshot feature takes the history of the component and when it is updated, it compares and checks with the old snapshot features.
+   
+toEqual : This method takes the value as parameter and checks with the assigned value in code. The key is initiated in 'expect' method.
+
+
+
+ 
