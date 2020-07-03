@@ -18,3 +18,8 @@ it('adds a button and checks the `gifts` value', () => {
         id:1
     }])
 })
+
+it('creates a div whenever a new gift is added', () => {
+    app.find('.btn-app').simulate('click');
+    expect(app.find('.gift-list').children().length).toEqual(2);
+})
