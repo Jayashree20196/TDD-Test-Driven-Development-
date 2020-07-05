@@ -21,7 +21,7 @@ describe('App', () => {
         afterEach(() => {
             app.setState({gifts: []})
         })
-        
+
         it('adds a button and checks the `gifts` value', () => {
             expect(app.state().gifts).toEqual([{
                 id:1
@@ -30,6 +30,10 @@ describe('App', () => {
         
         it('creates a div whenever a new gift is added', () => {
             expect(app.find('.gift-list').children().length).toEqual(1);
+        })
+
+        it('creates a gift component', () => {
+            expect(app.find('Gift').exists()).toBe(true);
         })
     })
 })
