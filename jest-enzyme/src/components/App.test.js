@@ -14,6 +14,7 @@ describe('App', () => {
     });
     
     describe('groups the same click of a button', () => {
+        const id = 1;
         beforeEach(() => {
             app.find('.btn-app').simulate('click');
         })
@@ -23,9 +24,7 @@ describe('App', () => {
         })
 
         it('adds a button and checks the `gifts` value', () => {
-            expect(app.state().gifts).toEqual([{
-                id:1
-            }])
+            expect(app.state().gifts).toEqual([{id}])
         })
         
         it('creates a div whenever a new gift is added', () => {
@@ -35,5 +34,17 @@ describe('App', () => {
         it('creates a gift component', () => {
             expect(app.find('Gift').exists()).toBe(true);
         })
-    })
+          
+        describe('remove gifts', () => {
+            beforeEach(() => {
+                app.instance().removeGift(id);
+            })
+
+            it('checking whether the id is removed', () => {
+                expect(app.state().gifts).toEqual([]);
+            })
+        });
+
+    });
+  
 })
