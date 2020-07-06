@@ -36,5 +36,11 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-cli": "^23.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.js",
+      "!src/index.js"
+    ]
   }
 }
